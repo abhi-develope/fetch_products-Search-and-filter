@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #e37676;
+}
+
+
+.product_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.product_card {
+    box-shadow: 0px 7px 32px rgba(0,0,0,0.25);
+    width: 600px;
+    min-height: 150px;
+    border-radius: 5px;
+    display: flex;
+    
+}
+
+.image_side{
+    flex: 1;
+    border-right: 1px solid black;
+    
+    padding: 10px 30px;
+}
+.image_side img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content_side{
+    flex: 5;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content_side h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.content_side p{
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+.content_side button{
+    font-size: 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    align-self: end;
+    
+}
+
+/* Input Styling */
+.input_container{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin: 10px auto;
+}
+
+.input_container input{
+    width: 100%;
+    padding-left: 20px;
+    height: 35px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.input_container input::placeholder{
+    color: var(--primary);
+}
+
+.input_container i {
+    color: var(--primary);
+}
+
+.search_icon{
+    position: relative;
+    left: 20px;
+    margin-left: -20px;
+    display: grid;
+    place-items: center;
+}
+
+
+
+@media(max-width:630px){
+    .product_card{
+        width: 90%;
+    }
+    .input_container{
+        width: 90%;
+    }
+}
+@media(max-width: 425px){
+    .product_card{
+        flex-direction: column;
+    }
+    .content_side button{
+        align-self: stretch;
+    }
+    .image_side img{
+        
+        width: 90%;
+    }
+}
+
